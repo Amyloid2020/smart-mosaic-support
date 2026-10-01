@@ -1,0 +1,42 @@
+
+
+:root {
+  --ink: #17130b;
+  --muted: #655d50;
+  --gold: #ffbd19;
+  --gold-dark: #8f5d00;
+  --paper: #fffaf0;
+  --line: #eadfca;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; line-height: 1.75; }
+a { color: inherit; }
+.siteHeader { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px max(20px, calc((100vw - 920px) / 2)); background: rgba(255,250,240,.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
+.brand { font-weight: 900; letter-spacing: .03em; text-decoration: none; }
+nav { display: flex; gap: 18px; font-size: 14px; }
+nav a { text-decoration: none; color: var(--muted); }
+main, .document { width: min(920px, calc(100% - 40px)); margin: 0 auto; }
+.hero { min-height: 68vh; display: grid; justify-items: center; align-content: center; padding: 72px 0 48px; text-align: center; }
+.appIcon { width: 132px; height: 132px; object-fit: cover; border-radius: 29px; box-shadow: 0 20px 50px rgba(89,53,0,.22); }
+.eyebrow { margin: 24px 0 0; color: var(--gold-dark); font-weight: 800; }
+h1 { margin: 4px 0 12px; font-size: clamp(42px, 8vw, 78px); line-height: 1; letter-spacing: -.04em; }
+.lead { max-width: 650px; margin: 0; color: var(--muted); font-size: clamp(17px, 2.5vw, 21px); }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+.actions a { padding: 12px 20px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+.primary { background: var(--ink); color: white; }
+.secondary { border: 1px solid var(--line); background: white; }
+.panel { margin-bottom: 72px; padding: clamp(24px, 5vw, 44px); border: 1px solid var(--line); border-radius: 28px; background: white; }
+.panel h2 { margin-top: 0; }
+.document { padding: 56px 0 80px; }
+.document h1 { font-size: clamp(34px, 6vw, 56px); }
+.document h2 { margin-top: 38px; font-size: 23px; line-height: 1.4; }
+.document h3 { margin-top: 24px; }
+.document p, .document li { color: #383126; }
+.document ul { padding-left: 1.4em; }
+.updated { color: var(--muted); font-size: 14px; }
+.note { padding: 18px 20px; border-left: 4px solid var(--gold); background: white; border-radius: 0 14px 14px 0; }
+footer { padding: 28px 20px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 13px; }
+@media (max-width: 540px) { .siteHeader { align-items: flex-start; } nav { gap: 10px; font-size: 12px; } }
+
